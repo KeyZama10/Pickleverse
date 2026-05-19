@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Fredoka:wght@600;700;800&family=Passion+One:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Tanker';
+  src: url('/Tanker-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-tanker: 'tanker', 'tanker Fallback', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  
+  --color-brand-sky: #6CB4EE; /* Sky blue */
+  --color-brand-cream: #FFFDD0; /* Cream/light beige */
+  --color-brand-yellow: #FFD700; /* Vibrant yellow */
+}
+
+@layer base {
+  html, body {
+    font-family: var(--font-inter);
+    margin: 0;
+    padding: 0;
+    background-color: #E2F1FB;
+  }
+}
+
+@layer utilities {
+  .text-stroke-black {
+    -webkit-text-stroke: 3px black;
+    color: white;
+  }
+  
+  .text-stroke-black-thick {
+    -webkit-text-stroke: 5px black;
+    color: white;
+  }
+  
+  .text-shadow-hard {
+    text-shadow: 5px 5px 0px black;
+  }
+  
+  .box-shadow-hard {
+    box-shadow: 6px 6px 0px black;
+  }
+  
+  .box-shadow-hard-hover {
+    box-shadow: 8px 8px 0px black;
+  }
+}
